@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seja Bem-Vindo(a)"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center">
+    </TextView>
+
+    <Button
+        android:id="@+id/btnMenuCliente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro Cliente"
+        android:background="#0000FF"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btnMenuEndereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro Endereço"
+        android:background="#0000FF"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btnMenuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro Item"
+        android:background="#0000FF"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btnMenuPedidoVenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pedido de Venda"
+        android:background="#0000FF"
+        android:textColor="@color/white"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

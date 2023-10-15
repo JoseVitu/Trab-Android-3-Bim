@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#EFEFEF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_novo_pedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="PEDIDO DE VENDA"
+            android:background="#0000FF"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Código do pedido:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/edCodigo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:hint="Informe o codigo"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/btBuscaPedido"
+                android:layout_width="1dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="#0000FF"
+                android:textColor="@color/white"
+                android:text="Buscar Pedido"/>
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spCliente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spItem"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/activity_colunas_item_list"></include>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lnLine"
+            android:background="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvQntItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="nenhum item adicionado" />
+
+        <TextView
+            android:id="@+id/tvTotalLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Total dos Itens R$ 0,00" />
+
+        <!-- Entrega section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados de Entrega"
+            android:textSize="18sp"
+            android:paddingTop="16dp" />
+
+        <Spinner
+            android:id="@+id/spEnderecoEntrega"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Selecione o endereço de entrega" />
+
+        <TextView
+            android:id="@+id/tvTotalFrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="end"
+            android:text="" />
+
+        <!-- Cobrança section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dados de Cobrança"
+            android:textSize="18sp"
+            android:paddingTop="16dp" />
+
+        <RadioGroup
+            android:id="@+id/rgFormaPgt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rbAVista"
+                android:text="A Vista" />
+
+            <RadioButton
+                android:id="@+id/rbAPrazo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="A Prazo" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/llAPrazo"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <EditText
+                android:id="@+id/edQuantParcelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordered_background"                        android:hint="Informe as Parcelas"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/btnGerarParcelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_customizado"
+                android:text="Gerar Parcelas"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Valor Total do Pedido" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="R$ "/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvTitleParcelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Parcelas" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tvParcelas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Parcela 1 - R$ 00,00"
+            android:background="@drawable/bordered_background" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/btnVoltarMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF0000"
+                android:text="Voltar" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#00FF00"
+                android:text="Salvar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

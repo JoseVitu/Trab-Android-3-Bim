@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="#00FFFF">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Desc"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:id="@+id/tvColunaDescricao"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:text="UM"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/tvColunaUnidMedida"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:text="Valor"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/tvColunaValor"/>
+
+</LinearLayout>
